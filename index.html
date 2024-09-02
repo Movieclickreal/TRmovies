@@ -117,7 +117,45 @@ background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, vio
   .code-entry button:hover {
       background-color: #555;
   }
+.button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-family: Arial, sans-serif;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+            text-decoration: none;
+            margin: 10px;
+            transition: background-color 0.3s ease;
+            animation: jump 1s infinite;
+        }
 
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .tiktok {
+            background: linear-gradient(to right, red, blue);
+        }
+
+        .discord {
+            background: linear-gradient(to right, white, blue);
+            color: black;
+        }
+
+        @keyframes jump {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-15px);
+            }
+            60% {
+                transform: translateY(-7px);
+            }
+        }
 </style>
 </head>
 <body>
@@ -129,6 +167,8 @@ background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, vio
   Use desktop site to see better
 <input type="text" id="searchInput" placeholder="Search for a show...">
 <button onclick="searchShow()">Search</button>
+  <a href="https://discord.gg/ayfpvYf2" class="button">Discord</a>
+    <a href="https://www.tiktok.com/@movieclicktro" class="button">TikTok</a>
 </div>
 <div class="show" onclick="showInfo('tt7235466')">
 <img id="banner-tt7235466" src="" alt="9-1-1 Banner">
